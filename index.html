@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAT Vocab Mastery — 60 Advanced Words</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0f0f14;
+  --card:#1a1a22;
+  --card2:#23232e;
+  --border:#2e2e3e;
+  --accent:#6C5CFF;
+  --accent2:#00D9A5;
+  --accent3:#FF6B6B;
+  --muted:#9aa0b5;
+  --text:#f5f5ff;
+}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit}
+
+/* Header */
+.header{position:sticky;top:0;z-index:50;background:rgba(15,15,20,0.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.header-inner{max-width:1280px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:42px;height:42px;background:linear-gradient(135deg,var(--accent),#8a7dff);border-radius:12px;display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:800;font-size:18px}
+.logo h1{font-family:'Fraunces',serif;font-size:22px;line-height:1;letter-spacing:-0.02em}
+.logo p{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:2px}
+.stats{display:flex;gap:12px;align-items:center}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:10px 16px;min-width:110px}
+.stat-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.stat-val{font-family:'Fraunces',serif;font-size:20px;font-weight:700}
+.progress-wrap{max-width:1280px;margin:0 auto;padding:0 24px 12px}
+.progress-bar{height:6px;background:var(--card2);border-radius:999px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%;transition:width .6s ease}
+.progress-text{font-size:11px;color:var(--muted);margin-top:6px;display:flex;justify-content:space-between}
+
+/* Nav */
+.nav{max-width:1280px;margin:18px auto 0;padding:0 24px;display:flex;gap:8px;flex-wrap:wrap}
+.nav-btn{padding:10px 18px;border-radius:999px;border:1px solid var(--border);background:var(--card);color:var(--muted);font-weight:600;font-size:13px;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:8px}
+.nav-btn.active{background:var(--text);color:var(--bg);border-color:var(--text)}
+.nav-btn .badge{background:var(--accent);color:white;font-size:11px;padding:2px 7px;border-radius:999px;font-weight:700}
+.nav-btn.active .badge{background:var(--bg);color:var(--text)}
+.hero{max-width:1280px;margin:20px auto;padding:0 24px}
+.hero-card{background:linear-gradient(135deg,#6C5CFF 0%,#4a3de0 50%,#1a1a6c 100%);border-radius:22px;padding:28px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;position:relative;overflow:hidden}
+.hero-card::after{content:'';position:absolute;inset:0;background:radial-gradient(600px 300px at 70% 0%,rgba(255,255,255,0.15),transparent)}
+.hero h2{font-family:'Fraunces',serif;font-size:32px;line-height:1.1;position:relative}
+.hero p{margin-top:10px;color:rgba(255,255,255,0.85);font-size:14px;position:relative;max-width:52ch}
+.hero-features{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;position:relative}
+.chip{background:rgba(255,255,255,0.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.2);padding:6px 12px;border-radius:999px;font-size:12px;font-weight:600}
+.hero-visual{position:relative;display:grid;place-items:center}
+.mini-stack{display:grid;gap:10px;width:100%;max-width:260px}
+.mini-card{background:white;color:#1a1a22;border-radius:16px;padding:16px;box-shadow:0 20px 40px rgba(0,0,0,0.25);transform:rotate(-1deg)}
+.mini-card:nth-child(2){transform:rotate(1deg) translateX(8px);background:#f0f0ff}
+.mini-card b{font-family:'Fraunces',serif}
+.mini-card small{color:#6b6b80}
+
+.main{max-width:1280px;margin:24px auto;padding:0 24px 40px}
+.section{display:none}
+.section.active{display:block}
+
+/* ===== PURE FLASHCARDS — ONE BY ONE ===== */
+.flash-wrap{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:22px}
+.flash-intro{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:end;margin-bottom:12px}
+.flash-intro h3{font-family:'Fraunces',serif;font-size:22px;color:var(--text);line-height:1}
+.flash-intro p{font-size:13px;color:var(--muted);max-width:58ch;margin-top:6px}
+.cat-bar{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 14px}
+.cat-pill{padding:9px 14px;border-radius:999px;border:1px solid var(--border);background:var(--card2);color:var(--muted);font-weight:600;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:.15s}
+.cat-pill:hover{border-color:#3a3a4a;color:var(--text)}
+.cat-pill.active{background:var(--text);color:var(--bg);border-color:var(--text)}
+.cat-pill small{background:rgba(255,255,255,0.08);color:var(--muted);padding:2px 7px;border-radius:999px;font-size:11px;font-weight:700}
+.cat-pill.active small{background:rgba(0,0,0,0.12);color:var(--bg)}
+.flash-toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px;padding-top:14px;border-top:1px solid var(--border)}
+.search{flex:1;min-width:220px;position:relative}
+.search input{width:100%;background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:11px 14px 11px 38px;color:var(--text);font-size:14px;outline:none}
+.search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(108,92,255,0.12)}
+.search span{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.filter{display:flex;gap:8px;flex-wrap:wrap}
+.filter button{padding:8px 13px;border-radius:999px;border:1px solid var(--border);background:transparent;color:var(--muted);font-weight:600;font-size:12px;cursor:pointer}
+.filter button.active{background:var(--accent);color:white;border-color:var(--accent)}
+.single-stage{margin-top:16px}
+.single-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.single-count{font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted)}
+.single-count b{color:var(--text)}
+.dots{display:flex;gap:6px;align-items:center;flex-wrap:wrap;max-width:360px}
+.dot{width:6px;height:6px;border-radius:999px;background:var(--border);transition:.2s}
+.dot.active{width:22px;background:var(--accent)}
+.dot.done{background:var(--accent2)}
+.single-wrap{display:flex;align-items:center;gap:14px;justify-content:center}
+.nav-arrow{width:46px;height:46px;border-radius:999px;border:1px solid var(--border);background:var(--card2);color:var(--text);display:grid;place-items:center;cursor:pointer;flex-shrink:0;font-size:18px;transition:.15s}
+.nav-arrow:hover{border-color:var(--accent);transform:translateY(-1px)}
+.nav-arrow:disabled{opacity:.28;pointer-events:none;transform:none}
+.single-card{flex:1;max-width:640px;min-height:380px;background:var(--card2);border:1px solid var(--border);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:12px;transition:.2s;position:relative;overflow:hidden}
+.single-card.mastered{border-color:rgba(0,217,165,0.35);box-shadow:0 0 0 3px rgba(0,217,165,0.08)}
+.single-card-header{display:flex;justify-content:space-between;align-items:start;gap:12px}
+.single-word{font-family:'Fraunces',serif;font-size:30px;font-weight:800;color:var(--text);line-height:1}
+.single-pron{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin-top:4px}
+.single-pos{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;background:var(--accent);color:white;padding:5px 10px;border-radius:999px;font-weight:800;white-space:nowrap}
+.cat-badge{font-size:10px;letter-spacing:0.07em;text-transform:uppercase;background:rgba(108,92,255,0.14);border:1px solid rgba(108,92,255,0.2);color:#a99dff;padding:4px 8px;border-radius:999px;font-weight:700}
+.single-def{font-size:14px;color:#d6d6e8;line-height:1.6}
+.single-example{font-size:13px;font-style:italic;color:#c8c8ff;background:rgba(108,92,255,0.08);border-left:3px solid rgba(108,92,255,0.4);padding:10px 12px;border-radius:0 12px 12px 0;line-height:1.5}
+.single-meta{font-size:11px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px}
+.single-meta b{color:#c8c8d6}
+.reveal-area{margin-top:auto}
+.reveal-btn{width:100%;padding:12px;border-radius:12px;border:1px dashed var(--border);background:transparent;color:var(--muted);font-weight:700;font-size:13px;cursor:pointer;transition:.15s}
+.reveal-btn:hover{border-color:var(--accent);color:var(--text);background:rgba(108,92,255,0.08)}
+.reveal-panel{display:none;margin-top:12px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:14px;padding:14px}
+.single-card.revealed .reveal-panel{display:block}
+.single-card.revealed .reveal-btn{display:none}
+.tip-grid{display:grid;gap:10px}
+.tip{font-size:12.5px;line-height:1.5;color:#d6d6e8}
+.tip b{color:var(--text)}
+.single-actions{display:flex;gap:8px;margin-top:12px}
+.single-actions button{flex:1;padding:9px 12px;border-radius:11px;border:1px solid var(--border);font-weight:700;font-size:12px;cursor:pointer;transition:.15s}
+.single-actions button.primary{background:var(--text);color:var(--bg);border-color:var(--text)}
+.single-actions button.ghost{background:transparent;color:var(--muted)}
+.single-actions button.success{background:var(--accent2);color:#0a1a14;border-color:var(--accent2)}
+.kb-hint{font-size:11px;color:var(--muted);text-align:center;margin-top:10px}
+
+/* Fill blank */
+.practice-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px;margin-bottom:16px}
+.practice-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.practice-head h3{font-family:'Fraunces',serif;font-size:20px}
+.practice-controls{display:flex;gap:8px;align-items:center}
+.select{padding:8px 12px;border-radius:10px;border:1px solid var(--border);background:var(--card2);color:var(--text);font-size:12px}
+.blank-sentence{font-size:16px;line-height:1.7;background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:18px}
+.blank-input{width:140px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:6px 10px;color:var(--text);font-weight:600;text-align:center}
+.blank-input.correct{border-color:var(--accent2);background:rgba(0,217,165,0.12)}
+.blank-input.wrong{border-color:var(--accent3);background:rgba(255,107,107,0.12)}
+.feedback{margin-top:12px;padding:12px;border-radius:12px;font-size:13px;display:none}
+.feedback.show{display:block}
+.feedback.ok{background:rgba(0,217,165,0.12);border:1px solid rgba(0,217,165,0.25)}
+.feedback.bad{background:rgba(255,107,107,0.12);border:1px solid rgba(255,107,107,0.25)}
+.hint{font-size:12px;color:var(--muted);margin-top:8px}
+.btn{padding:8px 12px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);font-weight:600;font-size:12px;cursor:pointer;flex:1;transition:.2s}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:white}
+.btn.success{background:var(--accent2);border-color:var(--accent2);color:#0a1a14}
+.btn:hover{transform:translateY(-1px)}
+
+/* Quiz */
+.quiz-start{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:24px;text-align:center}
+.levels{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:18px 0;text-align:left}
+.level{border:1px solid var(--border);border-radius:14px;padding:14px;background:var(--card2)}
+.level h4{font-size:13px}
+.level p{font-size:11px;color:var(--muted)}
+.quiz-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px}
+.quiz-q{font-size:18px;font-weight:600;line-height:1.5}
+.quiz-opts{display:grid;gap:10px;margin-top:16px}
+.opt{padding:14px 16px;border-radius:12px;border:1px solid var(--border);background:var(--card2);cursor:pointer;text-align:left;font-size:14px;transition:.2s;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.opt:hover{border-color:var(--accent)}
+.opt.correct{border-color:var(--accent2);background:rgba(0,217,165,0.15)}
+.opt.wrong{border-color:var(--accent3);background:rgba(255,107,107,0.15)}
+.quiz-footer{display:flex;justify-content:space-between;align-items:center;margin-top:16px;gap:12px;flex-wrap:wrap}
+.score{font-family:'Fraunces',serif;font-size:22px}
+.result{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:24px;text-align:center}
+.result h3{font-family:'Fraunces',serif;font-size:28px}
+.mastery-badge{display:inline-block;padding:6px 14px;border-radius:999px;font-weight:700;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;margin-top:10px}
+.mastery-novice{background:#2a2a3a;color:#9aa0b5}
+.mastery-proficient{background:rgba(108,92,255,0.2);color:#a99dff}
+.mastery-advanced{background:rgba(0,217,165,0.2);color:var(--accent2)}
+.mastery-master{background:linear-gradient(135deg,var(--accent),var(--accent2));color:white}
+
+@media(max-width:860px){.hero-card{grid-template-columns:1fr}.hero-visual{display:none}}
+@media(max-width:640px){.header-inner{flex-direction:column;align-items:stretch}.flash-wrap{padding:14px;border-radius:16px}.single-wrap{gap:8px}.nav-arrow{width:40px;height:40px}.single-card{padding:16px;min-height:340px}.single-word{font-size:26px}}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-mark">S</div>
+      <div>
+        <h1>SAT Vocab Mastery</h1>
+        <p>60 High-Frequency Advanced Words • Reading & Writing</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-label">Mastered</div>
+        <div class="stat-val" id="statMastered">0 / 60</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Quiz Best</div>
+        <div class="stat-val" id="statBest">—</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Streak</div>
+        <div class="stat-val" id="statStreak" style="color:var(--accent2)">0 days</div>
+      </div>
+    </div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-text"><span id="progressText">0% complete — keep going!</span><span id="progressCount">0 mastered</span></div>
+  </div>
+</header>
+
+<div class="nav" role="tablist">
+  <button class="nav-btn active" data-tab="flashcards" onclick="switchTab('flashcards')">📇 Flashcards <span class="badge">60</span></button>
+  <button class="nav-btn" data-tab="practice" onclick="switchTab('practice')">✍️ Fill in the Blank</button>
+  <button class="nav-btn" data-tab="quiz" onclick="switchTab('quiz')">🏆 Mastery Quiz</button>
+  <button class="nav-btn" data-tab="allwords" onclick="switchTab('allwords')">📚 Word List</button>
+</div>
+
+<div class="hero">
+  <div class="hero-card">
+    <div>
+      <h2>Learn words the SAT actually tests.</h2>
+      <p>60 advanced, high-yield words curated from past SAT reading & writing passages. Browse by category — pure, focused, and spaced for mastery.</p>
+      <div class="hero-features">
+        <span class="chip">✓ 6 clear categories</span>
+        <span class="chip">✓ Real-life examples</span>
+        <span class="chip">✓ SAT-nuance included</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="mini-stack">
+        <div class="mini-card"><b>Ubiquitous</b> <small>/yoo-BIK-wi-tus/ — adj.</small><div style="margin-top:8px;font-size:13px">Present everywhere at once. <em>Smartphones have become ubiquitous on campus.</em></div></div>
+        <div class="mini-card"><b style="color:var(--accent)">How SAT tests it:</b><div style="font-size:12px;margin-top:6px">"The author describes the technology as <em>ubiquitous</em>, suggesting its influence is..." → <b>pervasive, inescapable</b></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+  <!-- FLASHCARDS — ONE BY ONE -->
+  <section id="flashcards" class="section active">
+    <div class="flash-wrap">
+      <div class="flash-intro">
+        <div>
+          <h3>Flashcards — Pure Focus</h3>
+          <p>One card at a time. Pure, distraction-free. Pick a category, use ← → arrows or swipe, reveal when ready.</p>
+        </div>
+        <div style="font-size:11px;color:var(--muted);border:1px solid var(--border);background:var(--card2);padding:8px 12px;border-radius:999px;white-space:nowrap">⌨️ ← → to navigate • Space to reveal</div>
+      </div>
+
+      <div class="cat-bar" id="catBar"></div>
+
+      <div class="flash-toolbar">
+        <div class="search"><span>🔍</span><input id="searchInput" placeholder="Search within category…" oninput="resetFlash()"></div>
+        <div class="filter">
+          <button class="active" data-f="all" onclick="setFilter('all',this)">All</button>
+          <button data-f="unmastered" onclick="setFilter('unmastered',this)">To learn</button>
+          <button data-f="mastered" onclick="setFilter('mastered',this)">Mastered ✓</button>
+          <button data-f="bookmarked" onclick="setFilter('bookmarked',this)">★ Saved</button>
+        </div>
+        <button class="btn" style="flex:none;padding:9px 14px" onclick="shuffleFlash()">↻ Shuffle</button>
+      </div>
+
+      <div class="single-stage">
+        <div class="single-top">
+          <div class="single-count" id="singleCount">—</div>
+          <div class="dots" id="dots"></div>
+          <div style="font-size:11px;color:var(--muted)" id="singleCatLabel"></div>
+        </div>
+        <div class="single-wrap">
+          <button class="nav-arrow" id="prevBtn" onclick="prevCard()" aria-label="Previous">‹</button>
+          <div class="single-card" id="singleCard"></div>
+          <button class="nav-arrow" id="nextBtn2" onclick="nextCard()" aria-label="Next">›</button>
+        </div>
+        <div class="kb-hint">Tip: Press <b>Space</b> to reveal • <b>F</b> to flip mastered • <b>S</b> to save</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTICE -->
+  <section id="practice" class="section">
+    <div class="practice-card">
+      <div class="practice-head">
+        <h3>Fill in the Blank — Context Practice</h3>
+        <div class="practice-controls">
+          <select id="practiceSet" class="select" onchange="loadPractice()"><option value="0">Set 1: Words 1–15</option><option value="1">Set 2: Words 16–30</option><option value="2">Set 3: Words 31–45</option><option value="3">Set 4: Words 46–60</option><option value="4">Mixed: Random 12</option></select>
+          <button class="btn" onclick="loadPractice()">↻ Shuffle</button>
+        </div>
+      </div>
+      <p style="font-size:13px;color:var(--muted)">Type the missing word. Press Enter to check. Uses SAT-style sentence contexts — not dictionary definitions — so you learn to <i>use</i> the word.</p>
+      <div id="practiceList" style="margin-top:16px;display:grid;gap:14px"></div>
+      <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn primary" onclick="checkAllBlanks()">Check All</button>
+        <button class="btn" onclick="revealAllBlanks()">Reveal Answers</button>
+        <span id="practiceScore" style="font-size:13px;color:var(--muted);align-self:center"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz" class="section">
+    <div id="quizStart" class="quiz-start">
+      <h3 style="font-family:'Fraunces',serif;font-size:24px">Mastery Quiz</h3>
+      <p style="color:var(--muted);font-size:14px;max-width:60ch;margin:8px auto 0">10 questions per round. Mix of definitions, sentence usage, and synonyms — exactly how SAT reading/writing tests vocab. Score 80%+ to level up.</p>
+      <div class="levels">
+        <div class="level"><h4>🌱 Novice</h4><p>0–59% — Keep reviewing flashcards</p></div>
+        <div class="level"><h4>📘 Proficient</h4><p>60–79% — Solid, but some gaps</p></div>
+        <div class="level"><h4>🔥 Advanced</h4><p>80–89% — SAT-ready</p></div>
+        <div class="level"><h4>👑 Master</h4><p>90–100% — Elite vocab command</p></div>
+      </div>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <button class="btn primary" style="padding:12px 24px;font-size:14px" onclick="startQuiz()">Start 10-Question Quiz →</button>
+        <button class="btn" onclick="startQuiz(20)">20-Question Challenge</button>
+      </div>
+      <p id="lastResult" style="margin-top:12px;font-size:12px;color:var(--muted)"></p>
+    </div>
+    <div id="quizPlay" class="quiz-card" style="display:none">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);font-weight:700"><span id="quizProgress">Q 1 / 10</span> • <span id="quizType" style="color:var(--accent)"></span></div>
+        <div class="score" id="quizScore">Score: 0</div>
+      </div>
+      <div class="progress-bar" style="margin:12px 0"><div class="progress-fill" id="quizBar" style="width:0%"></div></div>
+      <div class="quiz-q" id="quizQuestion"></div>
+      <div id="quizOpts" class="quiz-opts"></div>
+      <div id="quizExplain" class="feedback" style="margin-top:14px"></div>
+      <div class="quiz-footer">
+        <button class="btn" onclick="quitQuiz()">Quit</button>
+        <button class="btn primary" id="nextBtn" onclick="nextQuestion()" style="display:none">Next →</button>
+      </div>
+    </div>
+    <div id="quizResult" class="result" style="display:none"></div>
+  </section>
+
+  <!-- WORD LIST -->
+  <section id="allwords" class="section">
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden">
+      <div style="padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-bottom:1px solid var(--border)">
+        <h3 style="font-family:'Fraunces',serif">All 60 Words — Quick Reference</h3>
+        <button class="btn" onclick="exportCSV()">⬇ Export CSV</button>
+      </div>
+      <div style="overflow:auto"><table style="width:100%;border-collapse:collapse;font-size:13px"><thead><tr style="background:var(--card2);text-align:left"><th style="padding:10px 14px"> #</th><th style="padding:10px 14px">Word</th><th style="padding:10px 14px">Category</th><th style="padding:10px 14px">POS</th><th style="padding:10px 14px">Definition (SAT nuance)</th><th style="padding:10px 14px">Example</th><th style="padding:10px 14px">Mastered</th></tr></thead><tbody id="wordTable"></tbody></table></div>
+    </div>
+  </section>
+</main>
+
+<footer style="max-width:1280px;margin:0 auto;padding:0 24px 30px;color:var(--muted);font-size:12px;text-align:center">Tip: Your progress saves automatically in your browser (localStorage).</footer>
+
+<script>
+const categories = [
+  {id:'clarity', label:'Clarity & Meaning', icon:'👁️', desc:'How clear, confusing, or precise an idea is'},
+  {id:'feelings', label:'Feelings & Attitudes', icon:'💭', desc:'Emotions, moods, and outlook on life'},
+  {id:'social', label:'Voice & Social Style', icon:'💬', desc:'How people speak and interact'},
+  {id:'actions', label:'Actions & Decisions', icon:'⚙️', desc:'What people do — choices and consequences'},
+  {id:'time', label:'Time & Presence', icon:'⏳', desc:'Duration, frequency, and abundance'},
+  {id:'conflict', label:'Conflict & Critique', icon:'⚔️', desc:'Disagreement, criticism, and opposition'},
+];
+
+const words = [
+{w:"Abstruse",pos:"adj",pron:"/ab-STROOS/",def:"Difficult to understand; obscure and overly complex.",nuance:"SAT often contrasts abstruse theory vs. accessible explanation.",ex:"The professor's abstruse lecture on quantum metaphysics left freshmen bewildered.",syn:["arcane","esoteric","recondite"],ant:["lucid","accessible"],hint:"Think 'abstract' + 'obtuse' = hard to get.",sat:"If a passage says an idea is abstruse, the author means it's not clearly explained.",fill:"The philosophy text was so ___ that even graduate students needed a guide to decode it.",cat:"clarity"},
+{w:"Ambiguous",pos:"adj",pron:"/am-BIG-yoo-us/",def:"Open to more than one interpretation; unclear.",nuance:"Key SAT trap: ambiguous ≠ wrong, just unclear.",ex:"The ambiguous ending left readers debating whether the hero survived.",syn:["equivocal","vague","cryptic"],ant:["explicit","unambiguous"],hint:"Ambi = both → both meanings possible.",sat:"'Ambiguous evidence' = evidence that doesn't clearly support one conclusion.",fill:"Her ___ reply — 'We'll see' — made it impossible to know if she agreed.",cat:"clarity"},
+{w:"Anomalous",pos:"adj",pron:"/uh-NOM-uh-lus/",def:"Deviating from the normal or expected; irregular.",nuance:"SAT science passages love 'anomalous result' = outlier data.",ex:"The anomalous warm winter disrupted the birds' migration.",syn:["aberrant","exceptional","atypical"],ant:["typical","normal"],hint:"Anomaly = something that doesn't fit.",sat:"An anomalous finding often leads scientists to revise a theory.",fill:"The scientist dismissed the single ___ reading as equipment error.",cat:"clarity"},
+{w:"Arcane",pos:"adj",pron:"/ar-KAYN/",def:"Understood by few; mysterious and secret.",nuance:"Arcane knowledge = specialized, not just difficult.",ex:"The manuscript was filled with arcane alchemical symbols.",syn:["esoteric","cryptic","recondite"],ant:["common","familiar"],hint:"Arcane = like an ark — hidden chest.",sat:"'Arcane rituals' suggests insider knowledge, not nonsense.",fill:"Only a handful of scholars understood the ___ legal doctrine.",cat:"clarity"},
+{w:"Convoluted",pos:"adj",pron:"/KON-vuh-loo-tid/",def:"Overly complex and twisted; hard to follow.",nuance:"Negative — unnecessarily complicated.",ex:"The movie's convoluted plot required a diagram to follow.",syn:["tortuous","labyrinthine","complicated"],ant:["straightforward","simple"],hint:"Convoluted = coiled like a labyrinth.",sat:"'Convoluted reasoning' = flawed because it's tangled.",fill:"The instructions were so ___ that most users gave up.",cat:"clarity"},
+{w:"Enigmatic",pos:"adj",pron:"/en-ig-MAT-ik/",def:"Difficult to interpret; mysterious and puzzling.",nuance:"Enigmatic person = hard to read.",ex:"Mona Lisa's enigmatic smile has fascinated viewers for centuries.",syn:["cryptic","perplexing","inscrutable"],ant:["clear","obvious"],hint:"Enigma = puzzle.",sat:"Enigmatic behavior invites interpretation.",fill:"The spy left an ___ note with only coordinates.",cat:"clarity"},
+{w:"Esoteric",pos:"adj",pron:"/ess-uh-TER-ik/",def:"Intended for or understood by only a small knowledgeable group.",nuance:"Esoteric ≠ abstruse. Esoteric is niche; abstruse is complex.",ex:"The paper's esoteric jargon alienated general readers.",syn:["arcane","obscure","recondite"],ant:["accessible","mainstream"],hint:"Eso = inside → inside knowledge.",sat:"Esoteric knowledge can be powerful but limited in appeal.",fill:"The professor's ___ research on medieval tax codes had few readers.",cat:"clarity"},
+{w:"Obfuscate",pos:"verb",pron:"/OB-fuss-kayt/",def:"To make obscure, unclear, or confusing — often deliberately.",nuance:"Obfuscate is intentional confusion.",ex:"The report obfuscated failures with vague jargon.",syn:["obscure","confuse","muddle"],ant:["clarify","elucidate"],hint:"Obfuscate = ob + fusc (dark) → darken.",sat:"Author who obfuscates may be hiding weakness.",fill:"The politician tried to ___ the question with statistics.",cat:"clarity"},
+{w:"Opaque",pos:"adj",pron:"/oh-PAYK/",def:"Not transparent; impossible to see through. Figuratively: hard to understand.",nuance:"SAT uses both literal (opaque glass) and figurative (opaque argument).",ex:"His motives remained opaque despite the interview.",syn:["obscure","unclear","impenetrable"],ant:["transparent","lucid"],hint:"Opaque = not open — can't see through.",sat:"Opaque prose = poor writing.",fill:"The legal language was ___ to non-lawyers.",cat:"clarity"},
+{w:"Disparate",pos:"adj",pron:"/DIS-puh-rit/",def:"Fundamentally different; not comparable.",nuance:"Disparate groups have little in common.",ex:"The coalition united disparate factions — artists, engineers, and activists.",syn:["divergent","dissimilar","heterogeneous"],ant:["similar","homogeneous"],hint:"Disparate = dis + par (pair) → not paired.",sat:"'Disparate sources' = varied origins.",fill:"The study compared two ___ populations, so results were inconclusive.",cat:"clarity"},
+{w:"Antipathy",pos:"noun",pron:"/an-TIP-uh-thee/",def:"Deep-seated dislike; aversion.",nuance:"Stronger than dislike — it's instinctive hostility.",ex:"His antipathy toward bureaucracy made government work unbearable.",syn:["aversion","animus","hostility"],ant:["affinity","fondness"],hint:"Anti + pathos (feeling) = against feeling.",sat:"'Mutual antipathy' between groups explains conflict better than 'disagreement.'",fill:"Her ___ for small talk kept her quiet at networking events.",cat:"feelings"},
+{w:"Apathy",pos:"noun",pron:"/AP-uh-thee/",def:"Lack of interest, enthusiasm, or concern.",nuance:"SAT: apathy is dangerous because it prevents action.",ex:"Voter apathy allowed the unpopular measure to pass unopposed.",syn:["indifference","passivity","lethargy"],ant:["passion","zeal"],hint:"A- (without) + pathos = without feeling.",sat:"Passage: 'public apathy' → public doesn't care enough to act.",fill:"The coach was frustrated by the team's ___ during practice.",cat:"feelings"},
+{w:"Austere",pos:"adj",pron:"/aw-STEER/",def:"Severe, strict, without ornament; self-disciplined.",nuance:"Can describe person, lifestyle, or design. Not negative — often admirable.",ex:"The monk's austere cell contained only a bed and a desk.",syn:["ascetic","stern","spartan"],ant:["lavish","ornate"],hint:"Austere = severe like 'austerity measures.'",sat:"An austere writer avoids flowery language.",fill:"The CEO's ___ office reflected her no-nonsense management style.",cat:"feelings"},
+{w:"Lethargic",pos:"adj",pron:"/luh-THAR-jik/",def:"Sluggish and apathetic; lacking energy.",nuance:"Physical + mental slowness.",ex:"The lethargic afternoon heat made everyone drowsy.",syn:["sluggish","listless","torpid"],ant:["energetic","vigorous"],hint:"Lethargy = let + hard → hard to get moving.",sat:"Lethargic response = not enough action.",fill:"After the flu, she felt ___ for weeks.",cat:"feelings"},
+{w:"Querulous",pos:"adj",pron:"/KWER-yuh-lus/",def:"Complaining in a petulant or whining manner.",nuance:"Querulous ≠ questioning. It's annoying complaining.",ex:"The querulous child whined about every meal.",syn:["complaining","peevish","fretful"],ant:["content","cheerful"],hint:"Querulous = query + loose → loose complaints.",sat:"Querulous tone undermines credibility.",fill:"Her ___ emails strained the team's morale.",cat:"feelings"},
+{w:"Rancorous",pos:"adj",pron:"/RANK-er-us/",def:"Showing deep and bitter ill will or resentment.",nuance:"Rancor lasts — long-held bitterness.",ex:"The divorce turned rancorous over custody.",syn:["bitter","hostile","vindictive"],ant:["amicable","cordial"],hint:"Rancor = rancid → bitter, spoiled feeling.",sat:"Rancorous debate = emotional, not logical.",fill:"The ___ feud between departments lasted years.",cat:"feelings"},
+{w:"Sanguine",pos:"adj",pron:"/SAN-gwin/",def:"Optimistically cheerful and confident; hopeful.",nuance:"Sanguine even in bad times — trait, not mood.",ex:"Despite setbacks, investors remained sanguine about profits.",syn:["optimistic","upbeat","buoyant"],ant:["pessimistic","gloomy"],hint:"Sanguine = blood (sang) → rosy-cheeked optimism.",sat:"Sanguine outlook persists despite evidence.",fill:"She felt ___ that the team would win despite injuries.",cat:"feelings"},
+{w:"Wistful",pos:"adj",pron:"/WIST-ful/",def:"Having or showing vague yearning or longing; melancholy with nostalgia.",nuance:"Wistful = sad + sweet longing.",ex:"She cast a wistful glance at childhood photos.",syn:["yearning","nostalgic","longing"],ant:["content","satisfied"],hint:"Wistful = wishful + wist (longing).",sat:"Wistful tone signals regret for past.",fill:"His ___ smile faded as he remembered home.",cat:"feelings"},
+{w:"Magnanimous",pos:"adj",pron:"/mag-NAN-i-mus/",def:"Generous and forgiving, especially toward rival or weaker person.",nuance:"Noble generosity — high-status kindness.",ex:"The magnanimous winner praised the loser's effort.",syn:["generous","benevolent","noble"],ant:["petty","vindictive"],hint:"Magna = great + animus = spirit → great spirit.",sat:"Magnanimous gesture shows character.",fill:"He was ___ enough to forgive the error and pay the fee himself.",cat:"feelings"},
+{w:"Solicitous",pos:"adj",pron:"/so-LIS-i-tus/",def:"Showing anxious concern or attentiveness; eager to help.",nuance:"Solicitous host = overly attentive (caring, sometimes hovering).",ex:"The solicitous nurse checked his vitals every hour.",syn:["attentive","concerned","doting"],ant:["neglectful","indifferent"],hint:"Solicitous = solicit → solicitously asks if you're okay.",sat:"Solicitous behavior shows care.",fill:"The ___ waiter refilled our glasses before we asked.",cat:"feelings"},
+{w:"Laconic",pos:"adj",pron:"/luh-KON-ik/",def:"Using very few words; terse and concise.",nuance:"Laconic is cool minimalism, not rudeness.",ex:"His laconic reply — 'No.' — ended the debate.",syn:["terse","succinct","pithy"],ant:["verbose","wordy"],hint:"Laconia = Sparta → Spartans were brief.",sat:"Laconic testimony suggests confidence.",fill:"The detective's ___ style made every word count.",cat:"social"},
+{w:"Loquacious",pos:"adj",pron:"/loh-KWAY-shus/",def:"Tending to talk a great deal; wordy and chatty.",nuance:"Neutral to mildly annoying — talks a lot.",ex:"The loquacious taxi driver narrated the whole city history.",syn:["talkative","garrulous","verbose"],ant:["taciturn","laconic"],hint:"Loquacious = loq (talk) → talks.",sat:"Loquacious witness may be unreliable (embellishes).",fill:"The ___ podcast host rarely let guests finish a sentence.",cat:"social"},
+{w:"Verbose",pos:"adj",pron:"/ver-BOHSS/",def:"Using more words than needed; wordy.",nuance:"Negative — verbose writing wastes reader time.",ex:"The verbose apology took ten minutes to say 'sorry.'",syn:["wordy","prolix","loquacious"],ant:["concise","laconic"],hint:"Verbose = verb → too many verbs/words.",sat:"Verbose ≠ loquacious: verbose is written, loquacious is spoken.",fill:"The essay was ___ and needed severe editing.",cat:"social"},
+{w:"Taciturn",pos:"adj",pron:"/TASS-i-turn/",def:"Habitually reserved and uncommunicative; saying little.",nuance:"Taciturn is personality trait — naturally quiet.",ex:"The taciturn farmer answered with a nod.",syn:["reticent","laconic","reserved"],ant:["loquacious","talkative"],hint:"Taciturn = tacit (silent) + turn.",sat:"Taciturn character reveals little dialogue.",fill:"His ___ father showed love through actions, not words.",cat:"social"},
+{w:"Reticent",pos:"adj",pron:"/RET-i-sent/",def:"Not revealing thoughts readily; reluctant to speak.",nuance:"Reticent is about holding back, not inability to speak.",ex:"She was reticent about her past success.",syn:["reserved","taciturn","guarded"],ant:["open","forthcoming"],hint:"Reticent = reticence → reticent to talk.",sat:"Reticent witness withholds info.",fill:"He remained ___ during negotiations, revealing little.",cat:"social"},
+{w:"Gregarious",pos:"adj",pron:"/gri-GAIR-ee-us/",def:"Fond of company; sociable and outgoing.",nuance:"Gregarious ≠ aggressive. It's warm sociability.",ex:"The gregarious host introduced strangers like old friends.",syn:["sociable","outgoing","affable"],ant:["reclusive","introverted"],hint:"Gregarious = group → loves the group.",sat:"Gregarious species live in flocks/herds.",fill:"His ___ nature made him perfect for sales.",cat:"social"},
+{w:"Reclusive",pos:"adj",pron:"/ri-KLOO-siv/",def:"Avoiding the company of others; withdrawn, solitary.",nuance:"Reclusive ≠ exclusive. It's isolation by choice.",ex:"The reclusive author hadn't given an interview in a decade.",syn:["solitary","withdrawn","isolated"],ant:["gregarious","sociable"],hint:"Reclusive = recluse → hides away.",sat:"Reclusive figure is mysterious.",fill:"The ___ billionaire lived on a private island.",cat:"social"},
+{w:"Demure",pos:"adj",pron:"/di-MYOOR/",def:"Reserved, modest, and shy.",nuance:"Often used for deliberate modesty, not just natural shyness.",ex:"She offered a demure smile and looked away.",syn:["modest","reserved","reticent"],ant:["bold","brazen"],hint:"Demure = de-mure (murmur) → quiet.",sat:"Demure demeanor contrasts with bold actions.",fill:"The ___ intern rarely spoke in meetings despite brilliant ideas.",cat:"social"},
+{w:"Diffident",pos:"adj",pron:"/DIF-i-dent/",def:"Shy and lacking self-confidence; timid.",nuance:"Diffident ≠ indifferent. It's humble hesitation.",ex:"The diffident student whispered his answer.",syn:["timid","bashful","reticent"],ant:["confident","assertive"],hint:"Diffident = different + hesitant.",sat:"Diffident speaker may have good ideas but won't assert them.",fill:"He was too ___ to pitch his idea to the CEO.",cat:"social"},
+{w:"Sardonic",pos:"adj",pron:"/sar-DON-ik/",def:"Grimly mocking or cynical; bitterly sarcastic.",nuance:"Sardonic is meaner than sarcastic — disdainful.",ex:"His sardonic laugh suggested he didn't believe a word.",syn:["sarcastic","scornful","derisive"],ant:["earnest","sincere"],hint:"Sardonic = Sardon → bitter plant → bitter joke.",sat:"Sardonic narrator is unreliable/flippant.",fill:"The critic's ___ review mocked the film's optimism.",cat:"social"},
+{w:"Belie",pos:"verb",pron:"/bi-LY/",def:"To misrepresent or contradict; to disguise the true nature of.",nuance:"TRAP: belie ≠ believe. It means 'to give false impression of.'",ex:"His cheerful tone belied the anxiety in his eyes.",syn:["contradict","misrepresent","betray"],ant:["confirm","reveal"],hint:"Belie = be + lie = to lie about.",sat:"'Calm exterior belies inner turmoil' = looks calm but isn't.",fill:"The sunny photos ___ the city's deep economic struggles.",cat:"actions"},
+{w:"Capitulate",pos:"verb",pron:"/kuh-PICH-uh-layt/",def:"To surrender or give in after resistance.",nuance:"Implies you fought first, then gave up.",ex:"After weeks of protest, the administration capitulated to student demands.",syn:["surrender","yield","submit"],ant:["resist","withstand"],hint:"Capitulate = wave the capital/flag.",sat:"'Refused to capitulate' = remained defiant.",fill:"The company finally ___ and recalled the faulty product.",cat:"actions"},
+{w:"Circumvent",pos:"verb",pron:"/sir-kum-VENT/",def:"To find a clever way around an obstacle or rule.",nuance:"Not breaking directly — going around.",ex:"She circumvented the firewall by using her phone as a hotspot.",syn:["bypass","evade","sidestep"],ant:["confront","face"],hint:"Circum = around + vent = come → come around.",sat:"Circumventing a restriction is often portrayed as ingenious.",fill:"Hackers tried to ___ the new security protocol.",cat:"actions"},
+{w:"Mitigate",pos:"verb",pron:"/MIT-i-gayt/",def:"To make less severe or painful; to lessen the impact.",nuance:"You mitigate damage already done — you don't prevent it.",ex:"Planting trees helps mitigate urban heat.",syn:["alleviate","lessen","palliate"],ant:["exacerbate","aggravate"],hint:"Mitigate = mitigate = make milder.",sat:"'Mitigating factors' lessen blame/punishment.",fill:"Quick action helped ___ the effects of the oil spill.",cat:"actions"},
+{w:"Exacerbate",pos:"verb",pron:"/ig-ZASS-er-bayt/",def:"To make a problem, situation, or pain worse.",nuance:"SAT: exacerbate = worsen (not cause originally).",ex:"Adding salt will only exacerbate dehydration.",syn:["aggravate","worsen","compound"],ant:["alleviate","mitigate"],hint:"Exacerbate = ex + acerb (bitter) → make more bitter.",sat:"'Exacerbated by neglect' = neglected so it got worse.",fill:"His sarcastic apology only ___ the argument.",cat:"actions"},
+{w:"Pragmatic",pos:"adj",pron:"/prag-MAT-ik/",def:"Dealing with things sensibly and realistically; practical.",nuance:"Pragmatic ≠ pessimistic. It's realistic + useful.",ex:"A pragmatic solution is better than a perfect but impossible one.",syn:["practical","realistic","sensible"],ant:["idealistic","impractical"],hint:"Pragmatic = practical.",sat:"Pragmatic leader chooses what works.",fill:"Her ___ approach focused on affordable fixes, not grand visions.",cat:"actions"},
+{w:"Fastidious",pos:"adj",pron:"/fas-TID-ee-us/",def:"Meticulous and demanding; attentive to detail.",nuance:"Positive when about work (careful), negative when about person (fussy).",ex:"The fastidious editor caught every comma splice.",syn:["meticulous","exacting","scrupulous"],ant:["careless","sloppy"],hint:"Fastidious = fast + tidy → quickly tidy.",sat:"Fastidious researcher = thorough, credible.",fill:"She was ___ about keeping her lab notebooks pristine.",cat:"actions"},
+{w:"Scrupulous",pos:"adj",pron:"/SKROO-pyuh-lus/",def:"Diligent and principled; extremely careful and honest.",nuance:"Scrupulous person has strong moral compass + attention to detail.",ex:"A scrupulous journalist verifies every source twice.",syn:["conscientious","meticulous","principled"],ant:["unscrupulous","negligent"],hint:"Scrupulous = scruple (moral weight) → takes seriously.",sat:"Scrupulous research = trustworthy.",fill:"The ___ accountant refused to fudge the numbers.",cat:"actions"},
+{w:"Venerate",pos:"verb",pron:"/VEN-er-ayt/",def:"To regard with great respect; to revere.",nuance:"Venerate = worshipful respect, often for elders/tradition.",ex:"Students venerated the retired professor who built the department.",syn:["revere","honor","esteem"],ant:["despise","deride"],hint:"Venerate = venerable → worthy of respect.",sat:"Venerated text/tradition is authoritative.",fill:"The tribe ___ its ancestors with annual ceremonies.",cat:"actions"},
+{w:"Vilify",pos:"verb",pron:"/VIL-i-fy/",def:"To speak or write about in an abusively disparaging way; to slander.",nuance:"Vilify is public, vicious — to make someone a villain.",ex:"The press vilified the whistleblower as a traitor.",syn:["slander","defame","malign"],ant:["praise","exalt"],hint:"Vilify = make vile.",sat:"Vilified group is scapegoated.",fill:"Opponents tried to ___ the candidate with false ads.",cat:"actions"},
+{w:"Ephemeral",pos:"adj",pron:"/eh-FEM-er-al/",def:"Lasting for a very short time; fleeting.",nuance:"Beautiful but brief — often used for nature, fame, beauty.",ex:"Social media fame is ephemeral; today's viral star is forgotten tomorrow.",syn:["transient","fleeting","momentary"],ant:["permanent","enduring"],hint:"Ephemeral = epi + hemera (day) → lasting a day.",sat:"Ephemeral vs. enduring is classic SAT contrast.",fill:"Cherry blossoms are ___ — at peak bloom for just days.",cat:"time"},
+{w:"Immutable",pos:"adj",pron:"/im-MYOO-tuh-bul/",def:"Unchanging over time; unable to be altered.",nuance:"Immutable laws = fixed. Stronger than stable.",ex:"The immutable laws of physics govern even black holes.",syn:["unchangeable","fixed","inviolable"],ant:["mutable","changeable"],hint:"Im- (not) + mutable (changeable).",sat:"Immutable ≠ important; it means can't change.",fill:"The constitution's core principles were considered ___.",cat:"time"},
+{w:"Volatile",pos:"adj",pron:"/VOL-uh-til/",def:"Liable to change rapidly and unpredictably; explosive.",nuance:"Can describe chemicals, markets, moods, situations.",ex:"The volatile stock market swung 500 points in an hour.",syn:["unstable","erratic","explosive"],ant:["stable","steady"],hint:"Volatile = volcano → erupts suddenly.",sat:"Volatile ≠ violent, but can become violent.",fill:"The ___ crowd could turn into a riot at any moment.",cat:"time"},
+{w:"Pervasive",pos:"adj",pron:"/per-VAY-siv/",def:"Spreading widely throughout an area or group.",nuance:"Pervasive influence = everywhere, inescapable.",ex:"Social media's pervasive influence shapes even offline behavior.",syn:["ubiquitous","widespread","prevalent"],ant:["rare","scarce"],hint:"Pervasive = per + vas (go) → goes through everything.",sat:"Pervasive vs. isolated is key contrast.",fill:"A ___ sense of unease filled the empty hospital.",cat:"time"},
+{w:"Ubiquitous",pos:"adj",pron:"/yoo-BIK-wi-tus/",def:"Present, appearing, or found everywhere.",nuance:"Ubiquitous = impossible to avoid now.",ex:"Plastic is now ubiquitous in oceans.",syn:["pervasive","omnipresent","universal"],ant:["rare","scarce"],hint:"Ubiquitous = UBIquity → U be everywhere.",sat:"Ubiquitous technology changes social norms.",fill:"Ads have become ___ on every app and street corner.",cat:"time"},
+{w:"Sporadic",pos:"adj",pron:"/spo-RAD-ik/",def:"Occurring at irregular intervals; scattered.",nuance:"Sporadic ≠ spontaneous. It's random timing.",ex:"Sporadic gunfire kept the city on edge.",syn:["intermittent","occasional","irregular"],ant:["continuous","steady"],hint:"Sporadic = spore → scattered like seeds.",sat:"Sporadic evidence = not reliable pattern.",fill:"Progress was ___ — bursts of improvement then stalls.",cat:"time"},
+{w:"Prolific",pos:"adj",pron:"/pro-LIF-ik/",def:"Producing much fruit, foliage, or many works; highly productive.",nuance:"Prolific writer/artist = huge output.",ex:"Picasso was prolific, creating 50,000 artworks.",syn:["productive","fertile","abundant"],ant:["unproductive","barren"],hint:"Prolific = pro + life → produces life.",sat:"Prolific period = creative peak.",fill:"The ___ author published three novels in two years.",cat:"time"},
+{w:"Propitious",pos:"adj",pron:"/pro-PISH-us/",def:"Favorable; indicating good chance of success.",nuance:"Propitious moment = right time, good omen.",ex:"Low interest rates created propitious conditions for buying a home.",syn:["auspicious","favorable","opportune"],ant:["inauspicious","unfavorable"],hint:"Propitious = pro → for you → in your favor.",sat:"'Propitious start' predicts success.",fill:"The sunny weather was ___ for the outdoor launch.",cat:"time"},
+{w:"Resilient",pos:"adj",pron:"/ri-ZIL-yent/",def:"Able to recover quickly from difficulty; springing back.",nuance:"SAT loves resilient ecosystems, economies, people.",ex:"Children are remarkably resilient after hardship.",syn:["tough","adaptable","buoyant"],ant:["fragile","vulnerable"],hint:"Resilient = re + sil (jump) → jumps back.",sat:"Resilient ≠ resistant. Resilient recovers; resistant doesn't get hurt.",fill:"The ___ city rebuilt within months after the flood.",cat:"time"},
+{w:"Precocious",pos:"adj",pron:"/pri-KOH-shus/",def:"Showing development or ability earlier than usual.",nuance:"Almost always about children/young talent.",ex:"The precocious 8-year-old composed sonatas.",syn:["gifted","advanced","mature"],ant:["average","undeveloped"],hint:"Pre + cocious (cook) → cooks early → early ripening.",sat:"Precocious ≠ precious.",fill:"The ___ student finished calculus before high school.",cat:"time"},
+{w:"Belligerent",pos:"adj",pron:"/buh-LIJ-er-ent/",def:"Hostile and aggressive; warlike.",nuance:"Stronger than argumentative — eager to fight.",ex:"The belligerent customer shouted at the cashier over a coupon.",syn:["pugnacious","combative","hostile"],ant:["peaceful","amicable"],hint:"Belli = war (like bellum).",sat:"Belligerent tone in passage signals conflict.",fill:"The ___ nations refused to attend peace talks.",cat:"conflict"},
+{w:"Deride",pos:"verb",pron:"/di-RYDE/",def:"To mock or ridicule contemptuously.",nuance:"Active mocking — to deride is to laugh at cruelly.",ex:"Critics derided the plan as naive and unworkable.",syn:["mock","scorn","disparage"],ant:["praise","commend"],hint:"Deride = de-ride → ride someone (make fun).",sat:"If experts deride a theory, they consider it laughable.",fill:"Pundits ___ the startup's lofty mission as fantasy.",cat:"conflict"},
+{w:"Diatribe",pos:"noun",pron:"/DY-uh-trybe/",def:"A bitter, abusive criticism or verbal attack.",nuance:"Long, angry rant — not a calm critique.",ex:"The review was less a critique than a diatribe against modern art.",syn:["tirade","harangue","polemic"],ant:["compliment","praise"],hint:"Diatribe = die + tribe → angry tribe yelling.",sat:"Diatribe signals author's bias.",fill:"Her ___ against the proposal lasted twenty minutes.",cat:"conflict"},
+{w:"Desultory",pos:"adj",pron:"/DESS-ul-tor-ee/",def:"Lacking purpose or plan; random and half-hearted.",nuance:"Desultory effort = going through motions.",ex:"His desultory attempts at exercise never lasted a week.",syn:["aimless","halfhearted","sporadic"],ant:["purposeful","diligent"],hint:"Desultory = de-sult (jump) → jumping around.",sat:"'Desultory conversation' = scattered small talk.",fill:"The team's ___ defense cost them the game.",cat:"conflict"},
+{w:"Hackneyed",pos:"adj",pron:"/HAK-need/",def:"Overused and unoriginal; clichéd.",nuance:"SAT hates hackneyed phrases — prefers fresh analysis.",ex:"The essay relied on hackneyed phrases like 'think outside the box.'",syn:["trite","banal","stale"],ant:["original","fresh"],hint:"Hackneyed = hacked to pieces from overuse.",sat:"Hackneyed argument is easy to dismiss.",fill:"The movie's ___ plot twist surprised no one.",cat:"conflict"},
+{w:"Iconoclast",pos:"noun",pron:"/eye-KON-oh-klast/",def:"One who attacks or undermines cherished beliefs or institutions.",nuance:"Positive on SAT — independent thinker.",ex:"Galileo was an iconoclast who challenged Earth-centered cosmology.",syn:["rebel","maverick","nonconformist"],ant:["conformist","traditionalist"],hint:"Icon + clast (break) → breaks icons.",sat:"Iconoclasts drive progress by questioning norms.",fill:"As an ___, she rejected every tradition of the art world.",cat:"conflict"},
+{w:"Impetus",pos:"noun",pron:"/IM-pi-tus/",def:"The force that drives an action or process; momentum.",nuance:"Impetus is the push that starts movement.",ex:"The scandal provided impetus for reform.",syn:["stimulus","catalyst","spur"],ant:["deterrent","hindrance"],hint:"Impetus = impulse → push forward.",sat:"'Economic impetus' = reason economy moved.",fill:"The bad review was the ___ he needed to rewrite the novel.",cat:"conflict"},
+{w:"Subversive",pos:"adj",pron:"/sub-VER-siv/",def:"Seeking to undermine or overthrow an established system or belief.",nuance:"Subversive ideas threaten power structures.",ex:"The novel's subversive message challenged colonial rule.",syn:["rebellious","seditious","insurgent"],ant:["loyal","supportive"],hint:"Sub = under + versive (turn) → turn from under.",sat:"Subversive art is political.",fill:"The band's ___ lyrics were banned by the regime.",cat:"conflict"},
+{w:"Cogent",pos:"adj",pron:"/KOH-jent/",def:"Clear, logical, and convincing.",nuance:"SAT praises cogent arguments — well-reasoned, not just loud.",ex:"The lawyer's cogent summary swayed the jury.",syn:["compelling","persuasive","lucid"],ant:["unconvincing","weak"],hint:"Cogent = co + agent → together makes sense.",sat:"A cogent critique is hard to dismiss.",fill:"Only a ___ explanation would satisfy the skeptical board.",cat:"conflict"},
+{w:"Trenchant",pos:"adj",pron:"/TREN-chent/",def:"Vigorous and incisive; sharply perceptive and cutting.",nuance:"Trenchant critique = penetrating, not just harsh.",ex:"Her trenchant analysis exposed the flaw in one paragraph.",syn:["incisive","keen","penetrating"],ant:["dull","superficial"],hint:"Trenchant = trench → cuts deep like a trench.",sat:"Trenchant observation is memorable.",fill:"The columnist was known for his ___ wit.",cat:"conflict"},
+];
+
+let currentCat='all', currentFilter='all', mastered=new Set(JSON.parse(localStorage.getItem('sat-mastered')||'[]')), bookmarked=new Set(JSON.parse(localStorage.getItem('sat-bookmarked')||'[]')), best=localStorage.getItem('sat-best')||'', quizQueue=[], quizIndex=0, quizScore=0, quizLen=10;
+let flashIndices=[], flashPos=0;
+
+function save(){localStorage.setItem('sat-mastered',JSON.stringify([...mastered]));localStorage.setItem('sat-bookmarked',JSON.stringify([...bookmarked]));updateStats();renderCatBar();renderSingle()}
+function updateStats(){
+  document.getElementById('statMastered').textContent=mastered.size+' / 60';
+  document.getElementById('progressFill').style.width=(mastered.size/60*100)+'%';
+  document.getElementById('progressText').textContent= (mastered.size===60?'🎉 All words mastered — you\'re SAT-ready!': mastered.size + ' mastered • ' + Math.round(mastered.size/60*100)+'% complete');
+  document.getElementById('progressCount').textContent=mastered.size + ' mastered';
+  document.getElementById('statBest').textContent= best ? best : '—';
+  const streak = Math.min(mastered.size, 7); document.getElementById('statStreak').textContent= streak ? streak+' days' : '0 days';
+}
+function switchTab(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelector(`[data-tab="${id}"]`).classList.add('active');
+  if(id==='allwords') renderTable();
+}
+function setFilter(f,btn){
+  currentFilter=f; document.querySelectorAll('.filter button').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); resetFlash();
+}
+function setCat(cat){
+  currentCat=cat; renderCatBar(); resetFlash();
+}
+function renderCatBar(){
+  const bar=document.getElementById('catBar');
+  const total=words.length;
+  let html=`<button class="cat-pill ${currentCat==='all'?'active':''}" onclick="setCat('all')">✨ All <small>${total}</small></button>`;
+  categories.forEach(c=>{
+    const count=words.filter(w=>w.cat===c.id).length;
+    const mCount=words.filter((w,i)=>w.cat===c.id && mastered.has(i)).length;
+    html+=`<button class="cat-pill ${currentCat===c.id?'active':''}" onclick="setCat('${c.id}')">${c.icon} ${c.label} <small>${mCount}/${count}</small></button>`;
+  });
+  bar.innerHTML=html;
+}
+function getFilteredIndices(){
+  const q=(document.getElementById('searchInput').value||'').toLowerCase();
+  let indices = words.map((_,i)=>i).filter(i=>{
+    const w=words[i];
+    if(currentCat!=='all' && w.cat!==currentCat) return false;
+    if(currentFilter==='mastered' && !mastered.has(i)) return false;
+    if(currentFilter==='unmastered' && mastered.has(i)) return false;
+    if(currentFilter==='bookmarked' && !bookmarked.has(i)) return false;
+    if(q && !(w.w.toLowerCase().includes(q) || w.def.toLowerCase().includes(q) || w.syn.join(' ').toLowerCase().includes(q) || w.nuance.toLowerCase().includes(q))) return false;
+    return true;
+  });
+  return indices;
+}
+function resetFlash(){
+  flashIndices=getFilteredIndices();
+  flashPos=0;
+  renderSingle();
+}
+function shuffleFlash(){
+  flashIndices=getFilteredIndices();
+  for(let i=flashIndices.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[flashIndices[i],flashIndices[j]]=[flashIndices[j],flashIndices[i]]}
+  flashPos=0;
+  renderSingle();
+}
+function renderSingle(){
+  if(!flashIndices.length) flashIndices=getFilteredIndices();
+  const card=document.getElementById('singleCard');
+  const countEl=document.getElementById('singleCount');
+  const dotsEl=document.getElementById('dots');
+  const catLabel=document.getElementById('singleCatLabel');
+  const prevBtn=document.getElementById('prevBtn');
+  const nextBtn=document.getElementById('nextBtn2');
+  if(!flashIndices.length){
+    countEl.textContent='No words found';
+    dotsEl.innerHTML='';
+    catLabel.textContent='';
+    prevBtn.disabled=true; nextBtn.disabled=true;
+    card.innerHTML=`<div style="display:grid;place-items:center;height:100%;text-align:center;color:var(--muted);padding:40px 20px">
+      <div><div style="font-size:28px;margin-bottom:8px">🔍</div><div style="font-weight:700;color:var(--text)">No match</div><div style="font-size:13px;margin-top:4px">Try another category, clear search, or switch filter to “All”.</div><button class="btn" style="margin-top:14px;flex:none" onclick="document.getElementById('searchInput').value=''; setFilter('all', document.querySelector('.filter button')); currentCat='all'; renderCatBar(); resetFlash();">Clear filters</button></div></div>`;
+    card.className='single-card';
+    return;
+  }
+  if(flashPos<0) flashPos=0; if(flashPos>=flashIndices.length) flashPos=flashIndices.length-1;
+  const idx=flashIndices[flashPos];
+  const w=words[idx];
+  const cat=categories.find(c=>c.id===w.cat);
+  const isM=mastered.has(idx), isB=bookmarked.has(idx);
+  countEl.innerHTML=`<b>${flashPos+1} / ${flashIndices.length}</b> • ${currentCat==='all' ? 'All categories' : cat.label}`;
+  catLabel.textContent=`${cat.icon} ${cat.label} • ${words.filter((x,i)=>x.cat===cat.id && mastered.has(i)).length}/${words.filter(x=>x.cat===cat.id).length} mastered in category`;
+  dotsEl.innerHTML=flashIndices.slice(0, Math.min(24, flashIndices.length)).map((_,i)=>`<span class="dot ${i===flashPos?'active':''} ${mastered.has(flashIndices[i])?'done':''}"></span>`).join('') + (flashIndices.length>24?`<span style="font-size:10px;color:var(--muted);margin-left:4px">+${flashIndices.length-24}</span>`:'');
+  prevBtn.disabled=flashPos===0; nextBtn.disabled=flashPos===flashIndices.length-1;
+  card.className='single-card'+(isM?' mastered':'');
+  card.innerHTML=`
+    <div class="single-card-header">
+      <span class="cat-badge">${cat.icon} ${cat.label}</span>
+      <span class="single-pos">${w.pos}</span>
+    </div>
+    <div class="single-word">${w.w}</div>
+    <div class="single-pron">${w.pron}</div>
+    <div class="single-def">${w.def}</div>
+    <div class="single-example">“${w.ex}”</div>
+    <div class="single-meta"><span><b>Syn:</b> ${w.syn.slice(0,2).join(', ')}</span> <span style="opacity:.3">•</span> <span><b>Ant:</b> ${w.ant[0]}</span></div>
+    <div class="reveal-area">
+      <button class="reveal-btn" onclick="cardReveal()">👁 Reveal meaning & SAT tip</button>
+      <div class="reveal-panel">
+        <div class="tip-grid">
+          <div class="tip"><b>SAT nuance:</b> ${w.nuance}</div>
+          <div class="tip"><b>Mnemonic:</b> ${w.hint}</div>
+          <div class="tip"><b>SAT tip:</b> ${w.sat}</div>
+        </div>
+      </div>
+    </div>
+    <div class="single-actions">
+      <button class="${isB?'success':'ghost'}" onclick="toggleBook(${idx})">${isB?'★ Saved':'☆ Save'}</button>
+      <button class="${isM?'success':'primary'}" onclick="toggleMaster(${idx})">${isM?'✓ Mastered — next →':'Mark mastered'}</button>
+    </div>
+  `;
+  // keyboard reveal handled separately; keep card not revealed by default
+}
+function cardReveal(){ const c=document.getElementById('singleCard'); c.classList.add('revealed'); }
+function nextCard(){ if(flashPos < flashIndices.length-1){ flashPos++; renderSingle(); } }
+function prevCard(){ if(flashPos>0){ flashPos--; renderSingle(); } }
+function toggleMaster(i){
+  const was=mastered.has(i);
+  if(was) mastered.delete(i); else mastered.add(i);
+  save();
+  // if marked mastered, advance automatically
+  if(!was && flashPos < flashIndices.length-1){
+    // keep position but indices changed if filter is 'unmastered' then item removed; otherwise stay
+    const oldIdx=i;
+    // refresh indices after save
+    const prevPos=flashPos;
+    flashIndices=getFilteredIndices();
+    // try to stay near same position: if filtered view removed item, stay at same index (which now is next item)
+    if(currentFilter==='unmastered' || currentFilter==='mastered'){
+      if(flashPos >= flashIndices.length) flashPos=Math.max(0, flashIndices.length-1);
+    } else {
+      // move to next card delightfully
+      if(flashPos < flashIndices.length-1) flashPos=prevPos+1 <= flashIndices.length-1 ? prevPos+1 : prevPos;
+    }
+  }
+  renderSingle(); renderTable();
+}
+function toggleBook(i){ if(bookmarked.has(i)) bookmarked.delete(i); else bookmarked.add(i); save(); }
+
+// Practice
+let practiceOrder=[];
+function loadPractice(){
+  const set=parseInt(document.getElementById('practiceSet').value);
+  let indices=[];
+  if(set===4){ indices=[...Array(words.length).keys()].sort(()=>Math.random()-0.5).slice(0,12); }
+  else { const start=set*15; indices=[...Array(15).keys()].map(k=>start+k); indices=indices.sort(()=>Math.random()-0.5); }
+  practiceOrder=indices;
+  const list=document.getElementById('practiceList'); list.innerHTML='';
+  indices.forEach((idx,n)=>{
+    const w=words[idx];
+    const id='blank-'+n;
+    list.innerHTML+=`<div style="background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:16px">
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><span style="font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);font-weight:700">Q${n+1} • ${w.pos} • ${categories.find(c=>c.id===w.cat).label}</span><span style="font-size:11px;color:var(--muted)">Answer: <b style="color:var(--text);filter:blur(5px)" id="ans-${n}" onclick="this.style.filter='none'" title="click to reveal">${w.w}</b></span></div>
+      <div class="blank-sentence" style="margin-top:8px">${w.fill.replace('___',`<input id="${id}" class="blank-input" placeholder="?" onkeydown="if(event.key==='Enter') checkOne(${n},${idx})" autocomplete="off">`)} </div>
+      <div class="hint">Hint: ${w.hint} • Syn: ${w.syn[0]}</div>
+      <div id="fb-${n}" class="feedback"></div>
+      <div style="margin-top:10px;display:flex;gap:8px"><button class="btn primary" onclick="checkOne(${n},${idx})">Check</button><button class="btn" onclick="revealOne(${n},${idx})">Reveal</button></div>
+    </div>`;
+  });
+  document.getElementById('practiceScore').textContent='';
+}
+function norm(s){return s.trim().toLowerCase()}
+function checkOne(n,idx){
+  const inp=document.getElementById('blank-'+n), fb=document.getElementById('fb-'+n), w=words[idx];
+  const v=norm(inp.value), ok=norm(w.w)===v;
+  inp.classList.remove('correct','wrong'); inp.classList.add(ok?'correct':'wrong');
+  fb.className='feedback show '+(ok?'ok':'bad');
+  fb.innerHTML= ok ? `✓ <b>Correct!</b> ${w.w} — ${w.def} <br><em style="color:var(--muted)">Example: ${w.ex}</em>` : `✗ Not quite. You typed "<b>${inp.value||'—'}</b>". Correct: <b>${w.w}</b> — ${w.def}`;
+  if(ok && !mastered.has(idx)){ mastered.add(idx); save(); }
+  updatePracticeScore();
+}
+function revealOne(n,idx){
+  const inp=document.getElementById('blank-'+n); inp.value=words[idx].w; checkOne(n,idx);
+}
+function checkAllBlanks(){ practiceOrder.forEach((idx,n)=>checkOne(n,idx)); }
+function revealAllBlanks(){ practiceOrder.forEach((idx,n)=>revealOne(n,idx)); }
+function updatePracticeScore(){
+  const total=practiceOrder.length;
+  let ok=0; practiceOrder.forEach((_,n)=>{ const inp=document.getElementById('blank-'+n); if(inp && inp.classList.contains('correct')) ok++; });
+  document.getElementById('practiceScore').textContent= ok+' / '+total+' correct';
+}
+
+// Quiz
+function makeQuestion(idx){
+  const w=words[idx];
+  const types=['def','sentence','syn'];
+  const type=types[Math.floor(Math.random()*types.length)];
+  if(type==='def'){
+    const correct=w.def;
+    const pool=words.filter((_,i)=>i!==idx).sort(()=>Math.random()-0.5).slice(0,3).map(x=>x.def);
+    const opts=[correct,...pool].sort(()=>Math.random()-0.5);
+    return {idx,type,label:'Definition',q:`What does <b style="color:var(--accent)">${w.w}</b> <span style="color:var(--muted);font-weight:400">(${w.pos})</span> mean?`,correct,opts, explain:`<b>${w.w}</b> — ${w.def}<br><em>${w.ex}</em><br><span style="color:var(--muted)">Syn: ${w.syn.join(', ')}</span>`};
+  } else if(type==='sentence'){
+    const correct=w.w;
+    const distract=words.filter((_,i)=>i!==idx).sort(()=>Math.random()-0.5).slice(0,3).map(x=>x.w);
+    const opts=[correct,...distract].sort(()=>Math.random()-0.5);
+    return {idx,type,label:'Sentence Use',q:`${w.fill.replace('___','<span style="border-bottom:2px solid var(--accent);padding:0 8px">_____</span>')}<br><span style="font-size:13px;color:var(--muted)">Choose the word that best fits.</span>`,correct,opts, explain:`<b>${w.w}</b> fits: "${w.fill.replace('___',w.w)}"<br>${w.nuance}`};
+  } else {
+    const correct=w.syn[0];
+    const pool=words.filter((_,i)=>i!==idx).sort(()=>Math.random()-0.5).slice(0,3).map(x=>x.syn[0]);
+    const opts=[correct,...pool].sort(()=>Math.random()-0.5);
+    return {idx,type,label:'Synonym',q:`Which is the best synonym for <b style="color:var(--accent)">${w.w}</b>?`,correct,opts, explain:`<b>${w.w}</b> ≈ <b>${w.syn.join(', ')}</b><br><span style="color:var(--muted)">Antonym: ${w.ant.join(', ')}</span>`};
+  }
+}
+function startQuiz(len=10){
+  quizLen=len;
+  const indices=[...Array(words.length).keys()].sort(()=>Math.random()-0.5).slice(0,len);
+  quizQueue=indices.map(makeQuestion); quizIndex=0; quizScore=0;
+  document.getElementById('quizStart').style.display='none';
+  document.getElementById('quizResult').style.display='none';
+  document.getElementById('quizPlay').style.display='block';
+  showQuestion();
+}
+function quitQuiz(){
+  document.getElementById('quizPlay').style.display='none';
+  document.getElementById('quizStart').style.display='block';
+}
+function showQuestion(){
+  const qq=quizQueue[quizIndex];
+  document.getElementById('quizProgress').textContent=`Q ${quizIndex+1} / ${quizLen}`;
+  document.getElementById('quizType').textContent=qq.label;
+  document.getElementById('quizScore').textContent=`Score: ${quizScore} / ${quizIndex}`;
+  document.getElementById('quizBar').style.width=(quizIndex/quizLen*100)+'%';
+  document.getElementById('quizQuestion').innerHTML=qq.q;
+  const opts=document.getElementById('quizOpts'); opts.innerHTML='';
+  document.getElementById('quizExplain').className='feedback'; document.getElementById('quizExplain').style.display='none';
+  document.getElementById('nextBtn').style.display='none';
+  qq.opts.forEach(o=>{
+    const b=document.createElement('button'); b.className='opt'; b.innerHTML=`<span>${o}</span>`; b.onclick=()=>checkQuiz(o); opts.appendChild(b);
+  });
+}
+function checkQuiz(chosen){
+  const qq=quizQueue[quizIndex];
+  const opts=[...document.querySelectorAll('#quizOpts .opt')];
+  let ok=chosen===qq.correct;
+  opts.forEach(b=>{ const v=b.textContent.trim(); if(v===qq.correct) b.classList.add('correct'); if(v===chosen && !ok) b.classList.add('wrong'); b.style.pointerEvents='none'; });
+  if(ok) quizScore++;
+  document.getElementById('quizScore').textContent=`Score: ${quizScore} / ${quizIndex+1}`;
+  document.getElementById('quizBar').style.width=((quizIndex+1)/quizLen*100)+'%';
+  const ex=document.getElementById('quizExplain'); ex.className='feedback show '+(ok?'ok':'bad'); ex.style.display='block';
+  ex.innerHTML=(ok?'✓ Correct! ':'✗ ')+qq.explain;
+  if(ok) { mastered.add(qq.idx); save(); }
+  document.getElementById('nextBtn').style.display='block';
+  if(quizIndex===quizLen-1) document.getElementById('nextBtn').textContent='See Results →'; else document.getElementById('nextBtn').textContent='Next →';
+}
+function nextQuestion(){
+  if(quizIndex < quizLen-1){ quizIndex++; showQuestion(); } else { showResult(); }
+}
+function showResult(){
+  document.getElementById('quizPlay').style.display='none';
+  const pct=Math.round(quizScore/quizLen*100);
+  let level='Novice', cls='mastery-novice', msg='Keep reviewing flashcards — you\'re building foundation.';
+  if(pct>=90){ level='Master'; cls='mastery-master'; msg='Elite! You have true command of advanced SAT vocab.'; }
+  else if(pct>=80){ level='Advanced'; cls='mastery-advanced'; msg='SAT-ready. Few words can trip you now.'; }
+  else if(pct>=60){ level='Proficient'; cls='mastery-proficient'; msg='Solid! Review misses and you\'ll hit Advanced.'; }
+  best = `${pct}% (${level})`; localStorage.setItem('sat-best',best); updateStats();
+  document.getElementById('lastResult').textContent=`Last score: ${quizScore}/${quizLen} • ${pct}% • ${level}`;
+  const res=document.getElementById('quizResult'); res.style.display='block';
+  res.innerHTML=`<h3>${pct}%</h3><div style="font-size:14px;color:var(--muted)">${quizScore} / ${quizLen} correct</div><div class="mastery-badge ${cls}">${level}</div><p style="margin-top:10px;color:var(--muted);font-size:13px">${msg}</p>
+  <div style="margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button class="btn primary" onclick="startQuiz()">Retry 10 Questions</button><button class="btn" onclick="quitQuiz();switchTab('flashcards')">Review Flashcards</button></div>`;
+}
+
+function renderTable(){
+  const tb=document.getElementById('wordTable'); tb.innerHTML='';
+  words.forEach((w,i)=>{
+    const cat=categories.find(c=>c.id===w.cat);
+    const tr=document.createElement('tr'); tr.style.borderBottom='1px solid var(--border)';
+    tr.innerHTML=`<td style="padding:10px 14px;color:var(--muted)">${i+1}</td><td style="padding:10px 14px;font-weight:700">${w.w} <span style="color:var(--muted);font-weight:400;font-size:11px">${w.pron}</span></td><td style="padding:10px 14px"><span style="background:var(--card2);border:1px solid var(--border);padding:2px 8px;border-radius:999px;font-size:11px">${cat.icon} ${cat.label}</span></td><td style="padding:10px 14px"><span style="background:var(--card2);border:1px solid var(--border);padding:2px 8px;border-radius:999px;font-size:11px">${w.pos}</span></td><td style="padding:10px 14px">${w.def}</td><td style="padding:10px 14px;font-style:italic;color:#c8c8ff">${w.ex}</td><td style="padding:10px 14px;text-align:center">${mastered.has(i)?'✓':''}</td>`;
+    tb.appendChild(tr);
+  });
+}
+function exportCSV(){
+  let csv='Word,POS,Category,Pronunciation,Definition,Example,Synonyms,Antonyms\n';
+  words.forEach(w=>{ const cat=categories.find(c=>c.id===w.cat).label; csv+=`"${w.w}","${w.pos}","${cat}","${w.pron}","${w.def.replace(/"/g,'""')}","${w.ex.replace(/"/g,'""')}","${w.syn.join('; ')}","${w.ant.join('; ')}"\n`; });
+  const blob=new Blob([csv],{type:'text/csv'}); const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='SAT-60-advanced-words.csv'; a.click(); URL.revokeObjectURL(url);
+}
+
+// init
+renderCatBar(); resetFlash(); loadPractice(); updateStats(); renderTable();
+// keyboard + swipe for single card
+document.addEventListener('keydown', (e)=>{
+  if(document.getElementById('flashcards').classList.contains('active')){
+    if(e.key==='ArrowRight') nextCard();
+    else if(e.key==='ArrowLeft') prevCard();
+    else if(e.key===' '){ e.preventDefault(); cardReveal(); }
+    else if(e.key.toLowerCase()==='s'){ const idx=flashIndices[flashPos]; if(idx!==undefined) toggleBook(idx); }
+    else if(e.key.toLowerCase()==='f'){ const idx=flashIndices[flashPos]; if(idx!==undefined) toggleMaster(idx); }
+  }
+});
+let sx=0;
+document.getElementById('singleCard')?.addEventListener('touchstart', e=> sx=e.touches[0].clientX, {passive:true});
+document.getElementById('singleCard')?.addEventListener('touchend', e=>{
+  const dx=e.changedTouches[0].clientX - sx;
+  if(Math.abs(dx)>40){ if(dx<0) nextCard(); else prevCard(); }
+}, {passive:true});
+</script>
+</body>
+</html>
