@@ -581,7 +581,14 @@ function checkOne(n,idx){
   updatePracticeScore();
 }
 function revealOne(n,idx){
-  const inp=document.getElementById('blank-'+n); inp.value=words[idx].w; checkOne(n,idx);
+  const inp=document.getElementById('blank-'+n), fb=document.getElementById('fb-'+n), w=words[idx];
+  inp.value=w.w;
+  inp.classList.remove('correct','wrong');
+  fb.className='feedback show';
+  fb.style.display='block';
+  fb.innerHTML=`<span style="color:var(--muted)">👁 Revealed:</span> <b>${w.w}</b> — ${w.def} <br><em style="color:var(--muted)">Not counted as mastered — type it yourself and press Check to earn it.</em><br><em style="color:var(--muted)">Example: ${w.ex}</em>`;
+  // do NOT mark as mastered, do NOT add 'correct' class, do NOT update stats
+  updatePracticeScore();
 }
 function checkAllBlanks(){ practiceOrder.forEach((idx,n)=>checkOne(n,idx)); }
 function revealAllBlanks(){ practiceOrder.forEach((idx,n)=>revealOne(n,idx)); }
